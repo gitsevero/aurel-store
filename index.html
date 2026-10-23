@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AUREL — Autumn Edit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Inter+Tight:wght@400;500;600&display=block" rel="stylesheet">
+<link rel="stylesheet" href="aurel.css?v=5">
+</head>
+<body class="carregando">
+
+<div class="intro" id="intro" aria-hidden="true"><span class="intro-marca" id="introMarca"></span></div>
+
+<p class="aviso">Complimentary shipping on orders over $250 · Free returns within 30 days</p>
+<header class="topo" id="topo">
+  <nav class="topo-l"><a href="#novos">Women</a><a href="#">Men</a><a href="#categorias">Bags</a><a href="#look">Journal</a></nav>
+  <a class="marca" href="#" id="marca">AUREL</a>
+  <div class="topo-r">
+    <button aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button>
+    <button aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c1.2-3.6 4-5.4 7.2-5.4s6 1.8 7.2 5.4"/></svg></button>
+    <button class="sacola" aria-label="Bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><b id="qtd">0</b></button>
+  </div>
+</header>
+
+<main>
+  <!-- hero: o título fica entre a foto e o recorte das modelos -->
+  <section class="hero" id="hero">
+    <div class="hero-foto" id="heroFoto"><img src="img/hero.webp" alt="Three models in the Autumn Edit"></div>
+    <h1 class="hero-titulo" id="heroTitulo"><span class="linha">Autumn</span><span class="linha">Edit</span></h1>
+    <div class="hero-frente" id="heroFrente"><img src="img/hero-recorte.webp" alt=""></div>
+    <div class="hero-lado revela">
+      <p class="rot">New season · 24 pieces</p>
+      <p class="hero-frase">Leather, satin and wool tailored for colder light.</p>
+      <a class="link" href="#novos">Shop the edit</a>
+    </div>
+  </section>
+
+  <!-- letreiro: corre sozinho e acelera com a rolagem -->
+  <div class="letreiro" aria-hidden="true"><div class="letreiro-trilho" id="letreiro"></div></div>
+
+  <!-- categorias: lista grande; a foto segue o mouse -->
+  <section class="cats" id="categorias">
+    <div class="cats-topo"><p class="rot">Shop by category</p><p class="rot">05 categories</p></div>
+    <ul class="cats-lista" id="catLista"></ul>
+    <div class="cat-flutua" id="catFlutua" aria-hidden="true"></div>
+  </section>
+
+  <section class="bloco" id="novos">
+    <div class="bloco-topo">
+      <h2 class="titulo grande" data-letras>New arrivals</h2>
+      <div class="filtros revela" id="filtros"><button class="on" data-f="all">All</button><button data-f="ready">Ready to wear</button><button data-f="acc">Accessories</button><button data-f="shoes">Shoes</button></div>
+    </div>
+    <div class="grade" id="grade"></div>
+  </section>
+
+  <!-- shop the look: pontos na foto ligados à lista de peças -->
+  <section class="look" id="look">
+    <div class="look-foto revela" id="lookFoto">
+      <img src="img/look.webp" alt="Model wearing the wool coat, crossbody bag and suede boots" loading="lazy">
+    </div>
+    <div class="look-lado">
+      <p class="rot revela">Shop the look</p>
+      <h2 class="titulo grande" data-letras>Old town, new coat</h2>
+      <ul class="look-lista" id="lookLista"></ul>
+      <button class="botao escuro revela" id="lookTudo">Add the full look · <span id="lookTotal"></span></button>
+    </div>
+  </section>
+
+  <!-- foto que cresce até a tela inteira conforme a rolagem -->
+  <section class="cresce" id="cresce">
+    <div class="cresce-palco">
+      <p class="cresce-txt esq" id="cresceEsq">Linen,</p>
+      <div class="cresce-foto" id="cresceFoto"><img src="img/faixa.webp" alt="Two models walking on the beach in linen" loading="lazy"></div>
+      <p class="cresce-txt dir" id="cresceDir">made to<br>move.</p>
+      <div class="cresce-fim" id="cresceFim"><p class="rot">Resort ’27</p><a class="botao" href="#">Discover resort</a></div>
+    </div>
+  </section>
+
+  <section class="editorial" id="editorial">
+    <figure class="ed ed-a"><div class="ed-foto"><img src="img/ed-1.webp" alt="Sand blazer and pleated skirt" loading="lazy"></div><figcaption><span class="rot">Journal</span><b>The colonnade walk</b></figcaption></figure>
+    <blockquote class="ed-frase" data-letras>Quiet layers for colder light.</blockquote>
+    <figure class="ed ed-b"><div class="ed-foto"><img src="img/ed-2.webp" alt="Cream cable knit" loading="lazy"></div><figcaption><span class="rot">Knitwear</span><b>Soft armour</b></figcaption></figure>
+  </section>
+</main>
+
+<footer class="rodape">
+  <form class="lista" id="lista" onsubmit="return false">
+    <label for="email" class="lista-titulo" data-letras>Join the list</label>
+    <div class="lista-campo revela"><input id="email" type="email" placeholder="Email address" autocomplete="email"><button type="submit" id="assinar">Subscribe</button></div>
+  </form>
+  <div class="rodape-grade revela">
+    <div><p class="rot">Contact</p><p>care@aurel.studio</p><p class="rot" style="margin-top:22px">Social</p><p>Instagram · Pinterest · TikTok</p></div>
+    <ul><li>Women</li><li>Men</li><li>Bags</li><li>Shoes</li><li>Jewelry</li><li>Gift cards</li></ul>
+    <ul><li>About</li><li>Journal</li><li>Stores</li><li>Careers</li><li>Shipping</li><li>Returns</li></ul>
+  </div>
+  <div class="rodape-marca" id="rodapeMarca" aria-hidden="true"></div>
+</footer>
+
+<script src="aurel.js?v=4"></script>
+</body>
+</html>
